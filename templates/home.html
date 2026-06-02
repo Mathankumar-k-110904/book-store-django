@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+</head>
+<body>
+
+
+<header>
+
+    <div class="logo">
+        📚 Book Haven
+    </div>
+
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#categories">BOOK CATEGORIES</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#why">WHY US?</a>
+        <a href="#contact">CONTACT US</a>
+    </nav>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <h1>Read Books,<br>Gain Knowledge</h1>
+
+        <p>
+            Discover Politics, History, Poetry and Fiction Books
+        </p>
+
+        <a href="{% url 'books' %}" class="hero-btn">
+            Explore Books
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section class="categories" id="categories">
+
+    <h2>Book Categories</h2>
+
+    <div class="category-grid">
+
+        <div class="category-card">
+            <img src="{% static 'images/book1.jpg' %}" alt="">
+            <h3>Fiction</h3>
+            <p>Explore imaginative stories and literary classics.</p>
+        </div>
+
+        <div class="category-card">
+            <img src="{% static 'images/book3.jpg' %}" alt="">
+            <h3>Fantasy</h3>
+            <p>Learn about civilizations and historical events.</p>
+        </div>
+
+        <div class="category-card">
+            <img src="{% static 'images/book2.jpg' %}" alt="">
+            <h3>Romance</h3>
+            <p>Experience emotions through beautiful poems.</p>
+        </div>
+
+        <div class="category-card">
+            <img src="{% static 'images/book4.jpg' %}" alt="">
+            <h3>Politics</h3>
+            <p>Understand political ideas and governance.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <div class="about-left">
+
+        <h2>About Us</h2>
+
+        <p>
+            Welcome to Book Haven, your trusted online bookstore.
+            We are passionate about connecting readers with books
+            that inspire, educate, and entertain.
+
+            Our collection includes Fiction, History,
+            Poetry, and Political books carefully selected
+            for readers of all interests.
+
+            Our mission is to make reading affordable,
+            accessible, and enjoyable for everyone.
+        </p>
+
+    </div>
+
+    <div class="about-right">
+
+        <img src="{% static 'images/book25.jpg' %}" alt="About Us">
+
+    </div>
+
+</section>
+
+
+
+<section class="why-us" id="why">
+
+    <h2>Why Choose Us?</h2>
+
+    <div class="why-grid">
+
+        <div class="why-box">
+            <h3>💰 Affordable Prices</h3>
+            <p>Quality books at budget-friendly prices.</p>
+        </div>
+
+        <div class="why-box">
+            <h3>📚 Huge Collection</h3>
+            <p>Books from multiple categories and genres.</p>
+        </div>
+
+        <div class="why-box">
+            <h3>🚚 Fast Delivery</h3>
+            <p>Quick and reliable delivery across India.</p>
+        </div>
+
+        <div class="why-box">
+            <h3>💳 Easy Ordering</h3>
+            <p>Simple and secure ordering experience.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-grid">
+
+        <div class="contact-box">
+            <h3>📍 Address</h3>
+            <p>Chennai, Tamil Nadu, India</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>📧 Email</h3>
+            <p>bookhaven@gmail.com</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>📞 Phone</h3>
+            <p>+91 9003329858</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>⏰ Working Hours</h3>
+            <p>Monday - Sunday : 9:00 AM - 8:00 PM</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <h3>📚 Book Haven</h3>
+
+    <p>Your Trusted Online Book Store</p>
+
+    <p>Chennai, Tamil Nadu, India</p>
+
+    <p>📧 bookhaven@gmail.com</p>
+
+    <p>📞 +91 9003329858</p>
+
+    <p>© 2026 Book Haven. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

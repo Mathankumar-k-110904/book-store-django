@@ -1,0 +1,162 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+body{
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    min-height: 100vh;
+    color: white;
+}
+
+
+
+header{
+    background: #2c3e50;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+header nav a{
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav a:hover{
+    color: #f1c40f;
+}
+
+
+
+.title{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.title h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.title p{
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+
+
+.books-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+
+
+.book-card{
+    background: white;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.book-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+
+.book-card img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.book-card img:hover{
+    transform: scale(1.05);
+}
+
+
+
+.book-card h3{
+    margin: 15px 0 10px;
+    font-size: 24px;
+}
+
+
+
+.book-card p{
+    font-size: 22px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+
+
+.book-card button,
+.book-card a{
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.book-card button:hover,
+.book-card a:hover{
+    background: #2980b9;
+}
+
+
+
+footer{
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+@media(max-width:768px){
+
+    .title h1{
+        font-size: 30px;
+    }
+
+    .book-card img{
+        height: 250px;
+    }
+
+}

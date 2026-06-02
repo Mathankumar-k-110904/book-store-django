@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Success</title>
+
+    <link rel="stylesheet" href="{% static 'css/success.css' %}">
+</head>
+<body>
+
+<div class="success-box">
+
+    <div class="success-icon">
+        🎉
+    </div>
+
+    <h1>Order Placed Successfully!</h1>
+
+    <p>Thank you for shopping with Book Haven 📚</p>
+
+    <p>Your order will be delivered soon.</p>
+
+    <a href="{% url 'home' %}" class="btn">
+        Back To Home
+    </a>
+
+</div>
+
+</body>
+</html>

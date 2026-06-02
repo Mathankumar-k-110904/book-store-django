@@ -1,0 +1,311 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Haven</title>
+    <link rel="stylesheet" href="{% static 'css/order.css' %}">
+</head>
+<body>
+
+
+<header>
+    <div class="logo">📚 Book Haven</div>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'books' %}">About</a>
+    </nav>
+</header>
+
+<center>
+<h1> Welcome {{ username }} </h1>
+
+<section class="hero">
+    <h1>Explore Our Books 📚</h1>
+</section>
+</center>
+
+<hr>
+
+<center>
+    <h2>History</h2>
+</center>
+
+
+<section class="books">
+
+    
+    <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book4.jpg' %}" alt="Book">
+        </div>
+
+        <h3>History Of Ambedkar</h3>
+        <p>₹220</p>
+        <a href="{% url 'ordernow' 'History Of Ambedkar' 220 %}">
+            <button>Order Now</button>
+        </a>
+        
+    </div>
+
+    
+    <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book2.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Atonment</h3>
+        <p>₹250</p>
+        <a href="{% url 'ordernow' 'Atonment' 250 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+    
+    <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book3.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Game Of Thrones</h3>
+        <p>₹290</p>
+        <a href="{% url 'ordernow' 'Game Of Thrones' 290 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+     <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book1.jpg' %}" alt="Book">
+        </div>
+
+        <h3>The Great Gatsby</h3>
+        <p>₹250</p>
+        <a href="{% url 'ordernow' 'The Great Gatsby' 250 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book9.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Che Guevara</h3>
+        <p>₹190</p>
+        <a href="{% url 'ordernow' 'Che Guevara' 190 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book10.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Self Love Poetry</h3>
+        <p>₹150</p>
+        <a href="{% url 'ordernow' 'Self Love Poetry' 150 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book12.jpg' %}" alt="Book">
+        </div>
+
+        <h3>The Tattooist Of Auschwitz</h3>
+        <p>₹230</p>
+        <a href="{% url 'ordernow' 'The Tattooist Of Auschwitz' 230 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book13.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Money Heist</h3>
+        <p>₹270</p>
+        <a href="{% url 'ordernow' 'Money Heist' 270 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book14.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Periyar Thoughts</h3>
+        <p>₹170</p>
+       <a href="{% url 'ordernow' 'Periyar Thoughts' 170 %}">
+        <button>Order Now</button>
+       </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book11.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Love Hope And Magic</h3>
+        <p>₹260</p>
+        <a href="{% url 'ordernow' 'Love Hope And Magic' 260 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book15.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Crimes Of Passion</h3>
+        <p>₹290</p>
+        <a href="{% url 'ordernow' 'Crimes Of Passion' 290 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book16.jpg' %}" alt="Book">
+        </div>
+
+        <h3>The Spartan Army</h3>
+        <p>₹240</p>
+        <a href="{% url 'ordernow' 'The Spartan Army' 240 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book17.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Karl Marx on Society and Social Change</h3>
+        <p>₹230</p>
+        <a href="{% url 'ordernow' 'Karl Marx on Society and Social Change' 230 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book18.jpg' %}" alt="Book">
+        </div>
+        <h3>Love Speaks its Name </h3>
+        <p>₹280</p>
+        <a href="{% url 'ordernow' 'Love Speaks its Name' 280 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book19.jpg' %}" alt="Book">
+        </div>
+
+        <h3>Nothing Sung And Nothing Spoken</h3>
+        <p>₹210</p>
+        <a href="{% url 'ordernow' 'Nothing Sung And Nothing Spoken' 210 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+     <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book20.jpg' %}" alt="Book">
+        </div>
+
+        <h3>The Vikings </h3>
+        <p>₹280</p>
+        <a href="{% url 'ordernow' 'The Vikings' 280 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book21.jpg' %}" alt="Book">
+        </div>
+
+        <h3>State and Revolution</h3>
+        <p>₹240</p>
+        <a href="{% url 'ordernow' 'State and Revolution' 240 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+         <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book22.jpg' %}" alt="Book">
+        </div>
+
+        <h3>AWFUL JOURNEY OF ONE SIDED LOVE </h3>
+        <p>₹290</p>
+        <a href="{% url 'ordernow' 'AWFUL JOURNEY OF ONE SIDED LOVE' 290 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+     <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book24.jpg' %}" alt="Book">
+        </div>
+
+        <h3>IT</h3>
+        <p>₹250</p>
+        <a href="{% url 'ordernow' 'IT' 250 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+     <div class="card">
+
+        <div class="image-box">
+            <img src="{% static 'images/book23.jpg' %}" alt="Book">
+        </div>
+
+        <h3>An Entirely New History of INDIA</h3>
+        <p>₹120</p>
+        <a href="{% url 'ordernow' 'An Entirely New History of INDIA' 120 %}">
+            <button>Order Now</button>
+        </a>
+    </div>
+
+
+</section>
+
+
+<footer>
+    <p>📍 Chennai, India</p>
+    <p>Email: bookhaven@gmail.com</p>
+</footer>
+
+</body>
+</html>
