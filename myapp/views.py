@@ -1,5 +1,8 @@
 from django.shortcuts import render,redirect
-from .models import signin,Order
+from .models import Order
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -10,58 +13,71 @@ def bookspage(request):
     return render(request,'books.html')
 
 def siginuppage(request):
-    if request.method== 'POST':
-        Name = request.POST.get('name')
-        Age = request.POST.get("dob")
-        Mail = request.POST.get("email")
-        Password = request.POST.get("password")
+    if request.method == 'POST':
+
+        username = request.POST.get('name')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
         confirm_password = request.POST.get('confirm_password')
 
-        if Password != confirm_password:
-            return render(request, 'sigin.html', {'error': 'Passwords do not match'})
-        
-        if signin.objects.filter(email=Mail).exists():
+        if password != confirm_password:
+            return render(request, 'sigin.html', {
+                'error': 'Passwords do not match'
+            })
+
+        if User.objects.filter(email=email).exists():
             return render(request, 'sigin.html', {
                 'error': 'Email already registered'
             })
-        
-        signin.objects.create(username=Name,date_of_birth=Age,email=Mail,password=Password)
-        
+
+        User.objects.create_user(
+            username=username,
+            email=email,
+            password=password
+        )
+
         return redirect('login')
 
-    return render(request,'sigin.html')
+    return render(request, 'sigin.html')
 
 def loginpage(request):
+
     if request.method == 'POST':
-        u_name = request.POST.get('name')
-        u_mail = request.POST.get('email')
-        u_password = request.POST.get('password')
 
-        user = signin.objects.filter(
-            username = u_name,
-            email = u_mail,
-            password = u_password,
-        ).first()
+        email = request.POST.get('email')
+        password = request.POST.get('password')
 
-        if user:
-            request.session['username']= user.username
-            request.session['email']= user.email
-            request.session['password']= user.password
-            return redirect('order')
-        
-        else:
-            return render(request,'login.html',{'error':'invalid input'})
-    return render(request,'login.html')
+        try:
+            user_obj = User.objects.get(email=email)
+        except User.DoesNotExist:
+            user_obj = None
 
-def orderpage(requset):
-    if 'username' in requset.session:
-        username = requset.session['username']
-        return render(requset,'order.html',{'username':username})
-    return redirect('login')
+        if user_obj:
+            user = authenticate(
+                request,
+                username=user_obj.username,
+                password=password
+            )
+
+            if user:
+                login(request, user)
+                return redirect('order')
+
+        return render(request, 'login.html', {
+            'error': 'Invalid Email or Password'
+        })
+
+    return render(request, 'login.html')
+
+@login_required
+def orderpage(request):
+    return render(request, 'order.html', {
+        'username': request.user.username
+    })
     
     # return render(requset,'order.html')
 
-
+@login_required
 def ordernow(request, book_name, price):
 
     if request.method == "POST":
@@ -90,3 +106,6 @@ def ordernow(request, book_name, price):
         "book_price": price
     })
 
+def logoutpage(request):
+    logout(request)
+    return redirect('login')

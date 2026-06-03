@@ -11,10 +11,14 @@
 
 <header>
     <div class="logo">📚 Book Haven</div>
-    <nav>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'books' %}">About</a>
-    </nav>
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'books' %}">About</a>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Logout</a>
+    {% endif %}
+</nav>
 </header>
 
 <center>
