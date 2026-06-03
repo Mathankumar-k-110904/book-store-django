@@ -13,7 +13,7 @@
     <div class="logo">📚 Book Haven</div>
 <nav>
     <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'books' %}">About</a>
+    {% comment %} <a href="{% url 'books' %}">About</a> {% endcomment %}
 
     {% if user.is_authenticated %}
         <a href="{% url 'logout' %}">Logout</a>
