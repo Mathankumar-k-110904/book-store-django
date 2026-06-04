@@ -4,14 +4,14 @@ A full-stack online bookstore web application developed using Django, Python, HT
 
  🚀 Features
 
-* User Registration and Login
-* Browse Available Books
-* Book Details and Pricing
-* Order Placement System
-* Checkout Page
-* Order Confirmation
-* Responsive User Interface
-* Admin Panel Management
+✅ User Registration & Authentication
+✅ Secure Login & Logout System
+✅ Browse Books Collection
+✅ Add Books to Cart
+✅ Place Orders Online
+✅ Order Management System
+✅ Admin Panel for Managing Books & Orders
+✅ Responsive and User-Friendly Interface
 
 🛠️ Technologies Used
 
