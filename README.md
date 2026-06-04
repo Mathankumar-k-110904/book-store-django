@@ -11,6 +11,31 @@ A full-stack online bookstore web application developed using Django, Python, HT
 * Admin Panel for Managing Books & Orders
 * Responsive and User-Friendly Interface
 
+## 📸 Project Screenshots
+
+### Home Page
+![Home Page](home.png)
+
+### About Page
+![About Page](about.png)
+
+### Books Page
+![Books Page](books.png)
+
+### Signup Page
+![Signup Page](sigiinup.png)
+
+### Order Page
+![Order Page](order.png)
+
+### User Details Page
+![User Details Page](userdetails.png)
+
+### Users Page
+![Users Page](users.png)
+
+### Admin Orders Page
+![Admin Orders Page](admin%20orders.png)
 🛠️ Technologies Used
 
 * Python
